@@ -1,1 +1,1192 @@
-Palencia_Scans
+#####################################################################################
+Palencia_Scans_Tree_Segmentation\
+setwd("D:/Madina/Palencia/LIDAR360")
+library(lidR)
+library(sp)
+library(sf)
+las_path <- "D:/Madina/Palencia/LIDAR360/6-LAZ"
+las_list <- list.files(las_path, pattern = ".las")
+for (i in 1:length(las_list)) {
+  las <- readLAS(file.path(las_path, las_list[i]))
+  TREES <- c(84, 91, 38, 174, 32, 418, 51, 12, 33, 46)
+  for (j in TREES) {
+    tree <- filter_poi(las, Tree_ID == j)
+    writeLAS(tree, file.path(las_path, sub(".las", paste0("_tree_", j, ".las"), las_list[i])))
+  }
+}
+
+getwd()
+#scan 05
+las_path <- "D:/Madina/Palencia/LIDAR360/6-LAZ/SCAN05_2022-08-29_14-15-29"
+las_list <- list.files(las_path, pattern = ".las")
+
+for (i in 1:length(las_list)) {
+  las <- readLAS(file.path(las_path, las_list[i]))
+  TREES <- c(1121, 4, 49, 1125,1127, 1124, 53, 568)
+  for (j in TREES) {
+    tree <- filter_poi(las, Tree_ID == j)
+    writeLAS(tree, file.path(las_path, sub(".las", paste0("_tree_", j, ".las"), las_list[i])))
+  }
+}
+
+#scan 06
+getwd()
+las_path <- "D:/Madina/Palencia/LIDAR360/6-LAZ"
+las_list <- list.files(las_path, pattern = ".las")
+for (i in 1:length(las_list)) {
+  las <- readLAS(file.path(las_path, las_list[i]))
+  TREES <- c(938, 3686, 162, 3696, 267)
+  for (j in TREES) {
+    tree <- filter_poi(las, Tree_ID == j)
+    writeLAS(tree, file.path(las_path, sub(".las", paste0("_tree_", j, ".las"), las_list[i])))
+  }
+}
+
+#scan 07
+getwd()
+las_path <- "D:/Madina/Palencia/LIDAR360/6-LAZ"
+las_list <- list.files(las_path, pattern = ".las")
+for (i in 1:length(las_list)) {
+  las <- readLAS(file.path(las_path, las_list[i]))
+  TREES <- c(16,2, 34, 22, 14, 24)
+  for (j in TREES) {
+    tree <- filter_poi(las, Tree_ID == j)
+    writeLAS(tree, file.path(las_path, sub(".las", paste0("_tree_", j, ".las"), las_list[i])))
+  }
+}
+
+#scan 08
+las_path <- "D:/Madina/Palencia/LIDAR360/6-LAZ"
+las_list <- list.files(las_path, pattern = ".las")
+for (i in 1:length(las_list)) {
+  las <- readLAS(file.path(las_path, las_list[i]))
+  TREES <- c(143, 36)
+  for (j in TREES) {
+    tree <- filter_poi(las, Tree_ID == j)
+    writeLAS(tree, file.path(las_path, sub(".las", paste0("_tree_", j, ".las"), las_list[i])))
+  }
+}
+
+#scan 08
+las_path <- "D:/Madina/Palencia/LIDAR360/6-LAZ"
+las_list <- list.files(las_path, pattern = ".las")
+for (i in 1:length(las_list)) {
+  las <- readLAS(file.path(las_path, las_list[i]))
+  TREES <- c(55, 1081, 2288, 2066, 1313, 463)
+  for (j in TREES) {
+    tree <- filter_poi(las, Tree_ID == j)
+    writeLAS(tree, file.path(las_path, sub(".las", paste0("_tree_", j, ".las"), las_list[i])))
+  }
+}
+#scan 11
+las_path <- "D:/Madina/Palencia/LIDAR360/6-LAZ"
+las_list <- list.files(las_path, pattern = ".las")
+for (i in 1:length(las_list)) {
+  las <- readLAS(file.path(las_path, las_list[i]))
+  TREES <- c(373, 1670, 256, 1951, 1052, 673, 44, 151, 84, 227)
+  for (j in TREES) {
+    tree <- filter_poi(las, Tree_ID == j)
+    writeLAS(tree, file.path(las_path, sub(".las", paste0("_tree_", j, ".las"), las_list[i])))
+  }
+}
+
+#scan 12
+las_path <- "D:/Madina/Palencia/LIDAR360/6-LAZ"
+las_list <- list.files(las_path, pattern = ".las")
+for (i in 1:length(las_list)) {
+  las <- readLAS(file.path(las_path, las_list[i]))
+  TREES <- c(758, 1330, 870, 1481, 852, 31, 783, 85, 76)
+  for (j in TREES) {
+    tree <- filter_poi(las, Tree_ID == j)
+    writeLAS(tree, file.path(las_path, sub(".las", paste0("_tree_", j, ".las"), las_list[i])))
+  }
+}
+
+#scan 13
+las_path <- "D:/Madina/Palencia/LIDAR360/6-LAZ"
+las_list <- list.files(las_path, pattern = ".las")
+for (i in 1:length(las_list)) {
+  las <- readLAS(file.path(las_path, las_list[i]))
+  TREES <- c(559, 74, 128, 81, 936)
+  for (j in TREES) {
+    tree <- filter_poi(las, Tree_ID == j)
+    writeLAS(tree, file.path(las_path, sub(".las", paste0("_tree_", j, ".las"), las_list[i])))
+  }
+}
+
+#scan 14
+las_path <- "D:/Madina/Palencia/LIDAR360/6-LAZ"
+las_list <- list.files(las_path, pattern = ".las")
+for (i in 1:length(las_list)) {
+  las <- readLAS(file.path(las_path, las_list[i]))
+  TREES <- c(21, 381, 699)
+  for (j in TREES) {
+    tree <- filter_poi(las, Tree_ID == j)
+    writeLAS(tree, file.path(las_path, sub(".las", paste0("_tree_", j, ".las"), las_list[i])))
+  }
+}
+
+#scan 15
+las_path <- "D:/Madina/Palencia/LIDAR360/6-LAZ"
+las_list <- list.files(las_path, pattern = ".las")
+for (i in 1:length(las_list)) {
+  las <- readLAS(file.path(las_path, las_list[i]))
+  TREES <- c(7, 9, 11, 16)
+  for (j in TREES) {
+    tree <- filter_poi(las, Tree_ID == j)
+    writeLAS(tree, file.path(las_path, sub(".las", paste0("_tree_", j, ".las"), las_list[i])))
+  }
+}
+
+#scan 15
+las_path <- "D:/Madina/Palencia/LIDAR360/6-LAZ"
+las_list <- list.files(las_path, pattern = ".las")
+for (i in 1:length(las_list)) {
+  las <- readLAS(file.path(las_path, las_list[i]))
+  TREES <- c(2, 7, 19)
+  for (j in TREES) {
+    tree <- filter_poi(las, Tree_ID == j)
+    writeLAS(tree, file.path(las_path, sub(".las", paste0("_tree_", j, ".las"), las_list[i])))
+  }
+}
+
+#scan 03
+las_path <- "D:/Madina/Palencia/LIDAR360/6-LAZ"
+las_list <- list.files(las_path, pattern = ".las")
+for (i in 1:length(las_list)) {
+  las <- readLAS(file.path(las_path, las_list[i]))
+  TREES <- c(2843, 2073, 2041, 10)
+  for (j in TREES) {
+    tree <- filter_poi(las, Tree_ID == j)
+    writeLAS(tree, file.path(las_path, sub(".las", paste0("_tree_", j, ".las"), las_list[i])))
+  }
+}
+
+############################################################################################
+Crown_Variables
+#################################################################################
+# Install / Load packages                                                    ----
+#################################################################################
+library(pacman)
+
+pacman::p_load("dplyr", "readr", "VoxR", "lidR", "rgl", "dbscan", "rlas", "plot3D", "geometry",
+               "alphahull")
+
+source("R_scripts/function_cw.R")
+
+#################################################################################
+# Setting inicial parameter                                                  ----
+#################################################################################
+
+# Working directory
+setwd("C:/Users/User/Desktop/MSc_MEDfOR_Madina")
+
+# Reading CBH information
+data_coordinates_cbh <- read.csv('Data/Crown.csv')
+
+# Reading the LAS point clouds
+in_dir <- "ScanPalencia"
+IndividualTrees <- list.files(in_dir, pattern="*.las", full.names = T)
+
+# Applying basic Crown Variables and transforming as data.frame
+# Tree Height (TH), Crown Base Height (CBH), Crown Lenght (CL), Crown Ratio (CR)
+CW_DATA <- lapply(FUN = cw_basics, IndividualTrees, data_coordinates_cbh)
+CW_DATA <- as.data.frame(do.call(rbind, CW_DATA)) %>% mutate_at(vars(c("TH", "CBH", "CL", "CR")), as.numeric)
+
+# Crown Projection Area (CPA)
+CW_CPA <- lapply(FUN = cw_pa, IndividualTrees, vox.size = 0.01, alpha.value = 1)
+CW_CPA <- as.data.frame(do.call(rbind, CW_CPA)) %>% mutate_at(vars(c("CPA")), as.numeric)
+
+# Crown volume (CV)
+CW_VOL <- lapply(FUN = cw_v, IndividualTrees)
+CW_VOL <- as.data.frame(do.call(rbind, CW_VOL)) %>% mutate_at(vars(c("CV")), as.numeric)
+
+# Stem isolation
+stem <- lapply(FUN = stem_iso, IndividualTrees, data_coordinates_cbh, epsi = 0.07, minpts = 80, Print = FALSE)
+stem <- as.data.frame(do.call(rbind, stem))
+
+# Crown plumpness 
+stem$plumpness <- stem$crown_radius / CW_DATA$CL
+
+#######################################################################################################
+CROWN
+las_path <- "C:/Users/User/Desktop/MSc_MEDfOR_Madina/ScanPalencia"
+lasdata <- las_path
+# Crown basics parameters ######################################################
+cw_basics <- function(lasdata, fieldData){
+  las <- read.las(lasdata, select = "xyz") %>% as.data.frame()
+  ID <- sub(".*/", "", lasdata)
+  CBH <- fieldData[fieldData$tree == ID, 'cbh']
+  
+  ID <- as.character(ID)                                          # Tree ID
+  TH   <- max(las$Z) - min(las$Z)                                 # Tree Height
+  CL   <- (max(las$Z) - min(las$Z)) - CBH                         # Crown Length
+  CW   <- (max(las$X) - min(las$X))                               # Crown Width
+  CP   <- CL / TH                                                 # Crown Percentage
+  CR   <- ((max(las$Z) - min(las$Z)) - CBH) / (max(las$Z) - min(las$Z)) # Crown Ratio
+  final_data <- data.frame(ID, TH, CBH, CL, CW, CR)
+  data <- rbind(data, final_data)
+  return(data)
+}
+
+###################################################################################################
+Crown ITSME 
+######package needed
+###before running follwoing codes, you have upadte package 'cli' and 'rlang' otherwise it will work
+
+
+install.packages("remotes")
+remotes::install_github("lmterryn/ITSMe", force = TRUE)
+library(ITSMe)
+library(tidyverse) ####for plotting
+###library(ggplot2)## you can also use ggplot2 
+library(ggplot2)
+library(lidR)
+library(dplyr)
+setwd("C:/Users/User/Desktop/MSc_MEDfOR_Madina/ScanPalencia") # set directory
+getwd()
+
+
+############calculation of single trees
+
+LASfile_tree <- "SCAN03_2073.las"
+
+# read las file
+tree_pc <- read_tree_pc(LASfile_tree)
+
+#extract x, y, z position
+
+XYZ_pos <- tree_position_pc(pc = tree_pc)
+
+#tree height
+
+H <- tree_height_pc(pc = tree_pc)
+H
+# also plot the tree point cloud
+
+H_out <- tree_height_pc(pc = tree_pc, plot = TRUE)
+
+H <- H_out$h
+
+plot_tree <- H_out$plot
+
+#####DBH calculation
+
+# Measure DBH from the tree point cloud and plot the circle fitting
+D_out <- diameter_slice_pc(
+  pc = tree_pc, slice_height = 1.3,
+  slice_thickness = 0.06, plot = TRUE
+)
+diameter <- D_out$diameter #show DBH value
+functional_diameter <- D_out$fdiameter #show functional diameter
+
+
+# Classify the tree point cloud with default settings and plot the classification results
+
+C_out <- classify_crown_pc(pc = tree_pc, plot = TRUE)
+crown_pc <- C_out$crownpoints
+plot <- C_out$plot  #####figure
+
+# Measure the projected crown area (PA) and plot the results
+out <- projected_area_pc(pc = crown_pc, plot = TRUE)
+pca <- out$pa
+plot <- out$plot ####figure
+plot(out)
+
+###############
+# Measure the crown volume and generate 3D plot
+out <- alpha_volume_pc(pc = crown_pc, plot = TRUE)
+volume <- out$av
+
+
+####################################all trees in a folder
+getwd()###please specify your directory in  Pcs PATH path out and
+
+inpath <- "C:/Users/User/Desktop/MSc_MEDfOR_Madina/ScanPalencia"
+outpath <- "C:/Users/User/Desktop/MSc_MEDfOR_Madina/Reasults"
+las_path <- "C:/Users/User/Desktop/MSc_MEDfOR_Madina/ScanPalencia"
+las_list <- list.files(las_path, pattern = ".las")
+
+####please do the rest
+# Tree height:
+# Plot the tree point clouds (check for outlines)
+# Specify dtm and r in case lower part of tree is not sampled
+Hs <- plot_tree_height_pcs(
+  PCs_path = inpath,
+  extension = ".las", #######it will read all the las file in the directtory you set last line
+  OUT_path = outpath,
+  r = 2
+)
+
+
+
+
+# DBH:
+# try out different thresholdR2 and slice_thickness values when default values fail
+DBHs <- plot_dbh_fit_pcs(
+  PCs_path =  "C:/Users/User/Desktop/MSc_MEDfOR_Madina/ScanPalencia",
+  extension = ".las",
+  OUT_path =  "C:/Users/User/Desktop/MSc_MEDfOR_Madina/Reasults/DBH",
+  thresholdR2 = 0.0025, slice_thickness = 0.2
+)
+
+# Crown classification:
+# For non-buttressed trees: (buttress = FALSE,) specify thresholdR2 and slice_thickness chosen in previous step
+# Try out different values for thresholdbranch and minheight
+crown_pcs <- plot_crown_classification_pcs(
+  PCs_path =  "C:/Users/User/Desktop/MSc_MEDfOR_Madina/ScanPalencia",
+  extension = ".las",
+  OUT_path =  "C:/Users/User/Desktop/MSc_MEDfOR_Madina/Reasults/CrownClassification",
+)
+
+
+# Projected area
+# Try out a different value for concavity
+# indicate crown = TRUE if you want to calculate projected area on the crown points only
+# In this case: also specify the values for the crown classification chosen in previous step
+PAs <- plot_pa_pcs(
+  PCs_path =  "C:/Users/User/Desktop/MSc_MEDfOR_Madina/ScanPalencia",
+  extension = ".las",
+  OUT_path =  "C:/Users/User/Desktop/MSc_MEDfOR_Madina/Reasults", concavity = 3,
+  thresholdbranch = 2, minheight = 3, buttress = F,
+  thresholdbuttress = 0.002, maxbuttressheight = 9
+)
+# 3D alpha volume
+# Try out a different value for alpha
+# indicate crown = TRUE if you want to calculate projected area on the crown points only
+# In this case: also specify the values for the crown classification chosen in previous step
+AVs <- plot_av_pcs(
+  PCs_path =  "C:/Users/User/Desktop/MSc_MEDfOR_Madina/ScanPalencia",
+  extension = ".las",
+  OUT_path =  "C:/Users/User/Desktop/MSc_MEDfOR_Madina/Reasults", alpha = 2,
+  thresholdbranch = 2, minheight = 3, buttress = F,
+  thresholdbuttress = 0.002, maxbuttressheight = 9
+)
+
+# Summary with default setting for trees and plot the summary
+summary <- summary_basic_pointcloud_metrics(PCs_path = "C:/Users/User/Desktop/MSc_MEDfOR_Madina/Reasults", TRUE) 
+
+###set directory ##where you want save your varibales with values
+listlas
+data2 <- NULL
+
+### save all variables
+inpath <- "C:/Users/User/Desktop/MSc_MEDfOR_Madina/ScanPalencia"
+outpath <- "C:/Users/User/Desktop/MSc_MEDfOR_Madina/Reasults"
+las_path <- "C:/Users/User/Desktop/MSc_MEDfOR_Madina/ScanPalencia"
+las_list <- list.files(las_path, pattern = ".las")
+
+data <- NULL
+data2 <- NULL
+
+i=las_list[1]
+
+for (i in las_list) {
+  # read the las file
+  tree_pc <- read_tree_pc(i)
+  
+  # Tree position
+  XYZ_pos <- tree_position_pc(pc = tree_pc)
+  
+  # also plot the tree point cloud
+  H_out <- tree_height_pc(pc = tree_pc, plot = TRUE)
+  H <- H_out$h
+  ggsave(paste0(Scan, "_", Tree, "H.jpeg"),
+         plot = H_out$plot,
+         path = outpath, 
+         dpi = 600)
+  # dbh
+  D_out <- diameter_slice_pc(
+    pc = tree_pc, slice_height = 1.3,
+    slice_thickness = 0.06, plot = TRUE
+  )
+  diameter <- D_out$diameter #show DBH value
+  functional_diameter <- D_out$fdiameter #show functional diameter
+  ggsave(paste0(Scan, "_", Tree, "dbh.jpeg"),
+         plot = D_out$plot,
+         path = outpath, 
+         dpi = 600)
+  
+  # Classify the tree point cloud with default settings and plot the classification results 
+  C_out <- classify_crown_pc(pc = tree_pc, plot = TRUE)
+  crown_pc <- C_out$crownpoints
+  ggsave(paste0(Scan, "_", Tree, "Crown_class.jpeg"),
+         plot = C_out$plot,
+         path = outpath, 
+         dpi = 600)
+  # Measure the projected crown area (PA) and plot the results
+  out <- projected_area_pc(pc = crown_pc, plot = TRUE)
+  pca <- out$pa
+  ggsave(paste0(Scan, "_", Tree, "PA.jpeg"),
+         plot = out$plot,
+         path = outpath, 
+         dpi = 600)
+  # Measure the crown volume and generate 3D plot
+  out <- alpha_volume_pc(pc = crown_pc, plot = TRUE)
+  volume <- out$av
+  ggsave(paste0(Scan, "_", Tree, "CV.jpeg"),
+         plot = out$plot,
+         path = outpath, 
+         dpi = 600)
+  # save in data frame
+  data <- data.frame(c(Scan = Scan,
+                       Tree = Tree,
+                       X = XYZ_pos[1],
+                       Y = XYZ_pos[2],
+                       Z = XYZ_pos[3],
+                       H_out = H, 
+                       DBH = diameter,
+                       C_out = crown_pc,
+                       PA = pca, 
+                       AVs = volume))
+  data2 <- rbind(data2, data)
+}
+
+data <- PAs
+summary()
+
+###############################################################################
+#SPECIES
+#Load packages
+library(tidyverse)
+library(ggplot2)
+library(ggthemes)
+library(hrbrthemes)
+library(ggpubr)
+library(ggeffects)
+library(dplyr)
+library(vtable)
+library(broom)
+library(plotly)
+library(performance)
+
+
+#Working directory
+setwd("C:/Users/User/Desktop/MSc_MEDfOR_Madina/Data")
+dat1 <- read.csv("Data_Madina2.csv")
+summary(dat1)
+
+dat1$ID <- as.factor(dat1$ID)
+dat1$Site <- as.factor(dat1$Site)
+dat1$Species <- as.factor(dat1$Species)
+dat1$Site_id <- as.factor(dat1$Site_id)
+
+#divide species
+dat_p <- dat1 |>
+  filter(Species == "Platanus Hispanica")
+dat_c <- dat1 |>
+  filter(Species == "Cedrus Atlantica")
+
+#############################################################################################
+# Total height Platanus 
+model1 <- lm(log(TH)~log(DBH) + Factor1, data = dat_p)
+#summary of the model
+summary(model1)
+#plot the model
+ggplot(dat_p, aes(x = DBH, y = TH, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "TH", color = "Species")+
+  theme_minimal()
+
+# Total height Cedrus
+model2 <- lm(log(TH)~log(DBH) + Factor1, data = dat_c)
+summary(model2)
+ggplot(dat1, aes(x = DBH, y = TH, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "TH", color = "Species")+
+  theme_minimal()
+
+# Total height Platanus+Cedrus
+model3 <- lm(log(TH)~log(DBH) + Factor1, data = dat1)
+summary(model3)
+ggplot(dat1, aes(x = DBH, y = TH, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "TH", color = "Species")+
+  theme_classic()
+
+################################################################################
+# Crown projection area Platanus
+model4 <- lm(log(CPA)~log(DBH) + Factor4, data = dat_p)
+#summary of the model
+summary(model4)
+#plot the model
+ggplot(dat_p, aes(x = DBH, y = CPA, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CPA", color = "Species")+
+  theme_minimal()
+
+# Crown projection area Cedrus
+model5 <- lm(log(CPA)~log(DBH) + Factor4, data = dat_c)
+#summary of the model
+summary(model5)
+#plot the model
+ggplot(dat_c, aes(x = DBH, y = CPA, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CPA", color = "Species")+
+  theme_minimal()
+
+# Crown projection area Platanus+Cedrus
+model6 <- lm(log(CPA)~log(DBH) + Factor4, data = dat1)
+#summary of the model
+summary(model6)
+#plot the model
+ggplot(dat1, aes(x = DBH, y = CPA, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CPA", color = "Species")+
+  theme_classic()
+
+#########################################################################
+# Crown width Platanus
+model7 <- lm(log(CW)~log(DBH) + Factor3, data = dat_p)
+#summary of the model
+summary(model7)
+#plot the model
+ggplot(dat_p, aes(x = DBH, y = CW, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CW", color = "Species")+
+  theme_minimal()
+
+# Crown width Cedrus
+model8 <- lm(log(CW)~log(DBH) + Factor3, data = dat_c)
+#summary of the model
+summary(model8)
+#plot the model
+ggplot(dat_c, aes(x = DBH, y = CW, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CW", color = "Species")+
+  theme_minimal()
+
+# Crown width Platanus+Cedrus
+model9 <- lm(log(CW)~log(DBH) + Factor4, data = dat1)
+#summary of the model
+summary(model9)
+#plot the model
+ggplot(dat1, aes(x = DBH, y = CW, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CW", color = "Species")+
+  theme_classic()
+
+############################################################################
+#Crown length Platanus
+model10 <- lm(log(CL)~log(DBH) + Factor2, data = dat_p)
+#summary of the model
+summary(model10)
+#plot the model
+ggplot(dat_p, aes(x = DBH, y = CL, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CL", color = "Species")+
+  theme_minimal()
+
+#Crown length Cedrus
+model11 <- lm(log(CL)~log(DBH) + Factor2, data = dat_c)
+#summary of the model
+summary(model11)
+#plot the model
+ggplot(dat_c, aes(x = DBH, y = CL, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CL", color = "Species")+
+  theme_minimal()
+
+#Crown length Platanus+Cedrus
+model12 <- lm(log(CL)~log(DBH) + Factor2, data = dat1)
+#summary of the model
+summary(model12)
+#plot the model
+ggplot(dat1, aes(x = DBH, y = CL, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CL", color = "Species")+
+  theme_classic()
+
+################################################################################
+# Crown Volume of Platanus
+model13 <- lm(log(CV)~log(DBH) + Factor5, data = dat_p)
+#summary of the model
+summary(model13)
+#plot the model
+ggplot(dat_p, aes(x = DBH, y = CV, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CV", color = "Species")+
+  theme_minimal()
+
+# Crown Volume of Cedrus
+model14 <- lm(log(CV)~log(DBH) + Factor5, data = dat_c)
+#summary of the model
+summary(model14)
+#plot the model
+ggplot(dat_c, aes(x = DBH, y = CV, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CV", color = "Species")+
+  theme_minimal()
+
+# Crown Volume of Platanus+Cedrus
+model15 <- lm(log(CV)~log(DBH) + Factor2, data = dat1)
+#summary of the model
+summary(model15)
+#plot the model
+ggplot(dat1, aes(x = DBH, y = CV, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CV", color = "Species")+
+  theme_classic()
+
+###############################################################################
+setwd("C:/Users/User/Desktop/MSc_MEDfOR_Madina/Data/Data_ScanField")
+# Import the data into R Studio
+data_dbh <- read.csv("FieldScan_dbh.csv", header = T)
+data_th <- read.csv("FieldScan_th.csv", header = T)
+
+#devide for species
+dat_p_th <- data_th |>
+  filter(Sp == "Platanus Hispanica")
+dat_c_th <- data_th |>
+  filter(Sp == "Cedrus Atlantica")
+
+dat_p_dbh <- data_dbh |>
+  filter(Sp == "Platanus Hispanica")
+dat_c_dbh <- data_dbh |>
+  filter(Sp == "Cedrus Atlantica")
+
+#########################################################################
+#Compare - diameter at breast height
+dbh_model1 <- lm(dbh_field~dbh_scan, data = dat_p_dbh)
+dbh_model2 <- lm(dbh_field~dbh_scan, data = dat_c_dbh)
+#summary of models
+summary(dbh_model1)
+summary(dbh_model2)
+#details
+performance(dbh_model1)
+performance(dbh_model2)
+
+#plot together
+ggarrange(ggplot(dat_p_dbh, aes(x = dbh_field, y = dbh_scan)) +
+         geom_point()+
+         geom_smooth(method = "lm", formula = y ~ x, se = FALSE)+
+         labs(x = "FIELD", y = "SCANNED", title = "DBH                P.Hispanica")+  
+           theme_classic(),
+         ggplot(dat_c_dbh, aes(x = dbh_field, y = dbh_scan)) +
+  geom_point()+
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE)+
+  labs(x = "FIELD", y = "SCANNED", title = "                     C.Atlantica  ")+  
+    theme_classic())
+
+plotly(ggplot(dat_c_dbh, aes(x = dbh_field, y = dbh_scan)) +
+         geom_point()+
+         geom_smooth(method = "lm", formula = y ~ x, se = FALSE)+
+         labs(x = "FIELD", y = "SCANNED", title = "   ")+  theme_few())
+
+##########################################################################
+#Compare - total height
+th_model3 <- lm(th_field~th_scan, data = dat_p_th)
+th_model4 <- lm(th_field~th_scan, data = dat_c_th)
+#summary of models
+summary(th_model3)
+summary(th_model4)
+#details
+performance(th_model3)
+performance(th_model4)
+
+#plot together
+ggarrange(ggplot(dat_p_th, aes(x= th_field, y= th_scan)) +
+  geom_point()+
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE)+
+  labs(x = "FIELD", y = "SCANNED", title = "TH                P.Hispanica")+
+  theme_classic(),
+  ggplot(dat_c_th, aes(x = th_field, y = th_scan)) +
+  geom_point()+
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE)+
+  labs(x ="FIELD", y = "SCANNED", title = "                   C.Atlantica")+
+  theme_classic())
+
+#################################################################################
+#MODEL LOCATION
+
+#set working directory
+setwd("C:/Users/User/Desktop/MSc_MEDfOR_Madina/Data/Location")
+dat01 <- read.csv('C_park.csv', header = T)
+dat2 <- read.csv('Street_C.csv')
+dat3 <- read.csv('P_Park.csv')
+dat4 <- read.csv('Street_P.csv')
+summary(dat01)
+summary(dat2)
+summary(dat3)
+summary(dat4)
+
+Platanus <- rbind(dat3, dat4)
+Cedrus <- rbind(dat01, dat2)
+
+data_park <- read.csv("Prak_data.csv")
+summary(data_park)
+data_street <- read.csv("Street_data.csv")
+summary(data_street)
+
+model_1 <- lm(log(CV) ~ log(DBH), data = Platanus)
+summary(model_1)
+anova(model_1)
+
+plot1 <- ggplot(Platanus, aes(CV, DBH, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CV")+
+  theme_minimal()
+
+plot_model(model_1, type = "pred", terms = c("Species", "Site"))
+
+model_2 <- lm(log(CL) ~ log(DBH), data = Platanus)
+summary(model_2)
+plot2 <- ggplot(Platanus, aes(CL, DBH, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CL")+
+  theme_minimal()
+
+model_3 <- lm(log(CW) ~ log(DBH), data = Platanus)
+summary(model_3)
+plot3 <- ggplot(Platanus, aes(CW, DBH, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CW")+
+  theme_minimal()
+
+model_4 <- lm(log(CPA) ~ log(DBH), data = Platanus)
+summary(model_4)
+anova(model_4)
+plot4 <- ggplot(Platanus, aes(CPA, DBH, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CPA")+
+  theme_minimal()
+
+model_5 <- lm(log(TH) ~ log(DBH), data = Platanus)
+summary(model_5)
+plot5 <- ggplot(Platanus, aes(TH, DBH, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "TH")+
+  theme_minimal()
+
+
+
+#######################
+model_6 <- lm(log(CV) ~ log(DBH), data = Cedrus)
+summary(model_6)
+hist(model_6)
+
+ggplot(Cedrus, aes(CV, DBH, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CV")+
+  theme_minimal()
+
+model_7 <- lm(log(CL) ~ log(DBH), data = Cedrus)
+summary(model_7)
+ggplot(Cedrus, aes(CL, DBH, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CL")+
+  theme_minimal()
+
+model_8 <- lm(log(CW) ~ log(DBH), data = Cedrus)
+summary(model_8)
+ggplot(Cedrus, aes(CW, DBH, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CW")+
+  theme_minimal()
+
+model_9 <- lm(log(CPA) ~ log(DBH), data = Cedrus)
+summary(model_9)
+ggplot(Cedrus, aes(CPA, DBH, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CPA")+
+  theme_minimal()
+
+model_10 <- lm(log(TH) ~ log(DBH), data = Cedrus)
+summary(model_10)
+ggplot(Cedrus, aes(TH, DBH, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "TH")+
+  theme_minimal()
+
+
+#######################
+model_6 <- lm(log(TH) ~ log(DBH) + Factor1, data = data_street)
+summary(model_6)
+
+model_7 <- lm(log(CPA) ~ log(DBH), data = data_street)
+summary(model_7)
+ggplot(data_street, aes(x = DBH, y = CPA, color = Species)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CPA")+
+  theme_minimal()
+
+model_8 <- lm(log(CW) ~ log(DBH) + Factor3, data = data_street)
+summary(model_8)
+
+model_9 <- lm(log(CL) ~ log(DBH) + Factor2, data = data_street)
+summary(model_9)
+
+model_10 <- lm(log(CV) ~ log(DBH) + Factor5, data = data_street)
+summary(model_10)
+
+#CEDRUS IN PARK
+#model1 Crown Volume(CV)
+model1<- lm(log(CV) ~ log(DBH) + factor1 , data = dat01)
+summary(model1)
+performance(model1)
+
+ggplot(dat1, aes(x = DBH, y = CV)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CV")+
+  theme_minimal()
+
+#model 2 Total Height (TH)
+model2<- lm(log(TH) ~ log(DBH), data = dat01)
+summary(model2)
+performance(model2)
+ggplot(dat01, aes(x = DBH, y = TH)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "TH")+
+  theme_minimal()
+
+ggplotly(ggplot(dat1, aes(x = DBH, y = TH, color = Site_id)) +
+         geom_point() +
+         geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+         labs(x = "DBH", y = "TH", color = "Site")+
+         theme_minimal())
+
+# model 3 Crown Length (CL)
+model3<- lm(log(CL) ~ log(DBH), data = dat01)
+summary(model3)
+ggplot(dat, aes(x = DBH, y = CL, color = Site_id)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CL", color = "Site")+
+  theme_minimal()
+
+#model 4 Crown Width (CW)
+model4<-lm(log(CW) ~ log(DBH), data = dat01)
+summary(model4)
+ggplot(dat, aes(x = DBH, y = CW, color = Site_id)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CW", color = "Site")+
+  theme_minimal()
+
+#model 5 Crown Projection Area
+model5<-lm(log(CPA) ~ log(DBH), data = dat01)
+summary(model5)
+ggplot(dat01, aes(x = DBH, y = CPA)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CPA")+
+  theme_minimal()
+
+#######################################################################
+#Cedrus in Street
+#crown volume
+model6 <- lm(log(CV) ~ log(DBH) +factor1 , data = dat2)
+summary(model6)
+
+# total height
+model7<- lm(log(TH) ~ log(DBH), data = dat2)
+summary(model7)
+ggplot(dat2, aes(x = DBH, y = TH)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "TH")+
+  theme_minimal()
+
+# crown length
+model8<- lm(log(CL) ~ log(DBH), data = dat2)
+summary(model8)
+
+#crown width
+model9<-lm(log(CW) ~ log(DBH), data = dat2)
+summary(model9)
+
+# crown projection area
+model10<-lm(log(CPA) ~ log(DBH), data = dat2)
+summary(model10)
+ggplot(dat2, aes(x = DBH, y = CPA)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CPA")+
+  theme_minimal()
+
+######################################################################
+# Platanus in park
+#crown volume
+model11 <- lm(log(CV) ~ log(DBH), data = dat3)
+summary(model11)
+
+# total height
+model12<- lm(log(TH) ~ log(DBH), data = dat3)
+summary(model12)
+ggplot(dat3, aes(x = DBH, y = TH)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "TH")+
+  theme_minimal()
+# crown length
+model13<- lm(log(CL) ~ log(DBH), data = dat3)
+summary(model13)
+
+#crown width
+model14<-lm(log(CW) ~ log(DBH), data = dat3)
+summary(model14)
+
+# crown projection area
+model15<-lm(log(CPA) ~ log(DBH), data = dat3)
+summary(model15)
+
+####################################################################
+#Platanus in Street
+#crown volume
+model16 <- lm(log(CV) ~ log(DBH), data = dat4)
+summary(model16)
+
+# total height
+model17 <- lm(log(TH) ~ log(DBH), data = dat4)
+summary(model17)
+ggarrange(ggplot(dat3, aes(x = DBH, y = TH)) +
+            geom_point() +
+            geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+            labs(x = "DBH", y = "TH")+
+            theme_minimal(),
+          ggplot(dat4, aes(x = DBH, y = TH)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "TH")+
+  theme_minimal())
+  
+
+# crown length
+model18 <- lm(log(CL) ~ log(DBH), data = dat4)
+summary(model18)
+
+#crown width
+model19<-lm(log(CW) ~ log(DBH), data = dat4)
+summary(model19)
+
+# crown projection area
+model20<-lm(log(CPA) ~ log(DBH), data = dat4)
+summary(model20)
+
+#######################################################################
+###################################################################
+#MODEL LOCATION PLATANUS HISPANICA and CEDRUS ATLANTICA
+
+#set working directory
+setwd("C:/Users/User/Desktop/MSc_MEDfOR_Madina/Data/Location")
+dat01 <- read.csv('C_park.csv', header = T)
+dat2 <- read.csv('Street_C.csv')
+dat3 <- read.csv('P_Park.csv')
+dat4 <- read.csv('Street_P.csv')
+summary(dat01)
+summary(dat2)
+summary(dat3)
+summary(dat4)
+
+Platanus <- rbind(dat3, dat4)
+Cedrus <- rbind(dat01, dat2)
+
+data3 <- rbind(dat01, dat2, dat3, dat4)
+
+data_park <- read.csv("Prak_data.csv")
+summary(data_park)
+data_street <- read.csv("Street_data.csv")
+summary(data_street)
+
+########################################################################
+#model total height Platanus
+model20 <- lm(log(TH) ~ log(DBH), data = Platanus)
+#summary of the model
+summary(model20)
+#plot the model
+ggplot(Platanus, aes(x=DBH, y=TH, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "TH", title = "                P.Hispanica")+
+  theme_minimal()+ 
+  paste("R² =", round(summary(model_1),2)) conerText(txt1,cex=1.5,col=2)
+  
+#model total height Cedrus
+model21 <- lm(log(TH) ~ log(DBH), data = Cedrus)
+#summary of the model
+summary(model21)
+#plot the model
+ggplot(Cedrus, aes(x=DBH, y=TH, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "TH", title = "                C.Atlantica")+
+  theme_minimal()
+
+#plot together
+ggarrange(ggplot(Platanus, aes(x=DBH, y=TH, color = Site)) +
+            geom_point() +
+            geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+            labs(x = "DBH", y = "TH", title = "                P.Hispanica")+
+            theme_classic(),
+          ggplot(Cedrus, aes(x=DBH, y=TH, color = Site)) +
+            geom_point() +
+            geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+            labs(x = "DBH", y = "TH", title = "                C.Atlantica")+
+            theme_classic())
+
+########################################################################
+#model crown projection area Platanus
+model22 <- lm(log(CPA) ~ log(DBH), data = Platanus)
+#summary of the model
+summary(model22)
+#plot the model
+ggplot(Platanus, aes(x=DBH, y=CPA, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CPA")+
+  theme_minimal()
+
+#model crown projection area Cedrus
+model23 <- lm(log(CPA) ~ log(DBH), data = Cedrus)
+#summary of the model
+summary(model23)
+#plot the model
+ggplot(Cedrus, aes(x=DBH, y=CPA, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CPA")+
+  theme_minimal()
+
+#plot together
+ggarrange(ggplot(Platanus, aes(x=DBH, y=CPA, color = Site)) +
+            geom_point() +
+            geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+            labs(x = "DBH", y = "CPA", title = "                P.Hispanica")+
+            theme_classic(),
+          ggplot(Cedrus, aes(x=DBH, y=CPA, color = Site)) +
+            geom_point() +
+            geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+            labs(x = "DBH", y = "CPA",title = "                C.Atlantica")+
+            theme_classic())
+
+##########################################################################
+#model crown length Platanus
+model24 <- lm(log(CL) ~ log(DBH), data = Platanus)
+#summary of the model
+summary(model24)
+#plot the model
+ggplot(Platanus, aes(x=DBH, y=CL,  color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CL")+
+  theme_minimal()
+
+#model crown length Cedrus
+model25 <- lm(log(CL) ~ log(DBH), data = Cedrus)
+#summary of the model
+summary(model25)
+#plot the model
+ggplot(Cedrus, aes(x=DBH, y=CL, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CL")+
+  theme_minimal()
+
+#plot together
+ggarrange(ggplot(Platanus, aes(x=DBH, y=CL,  color = Site)) +
+            geom_point() +
+            geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+            labs(x = "DBH", y = "CL", title = "                P.Hispanica")+
+            theme_classic(),
+          ggplot(Cedrus, aes(x=DBH, y=CL, color = Site)) +
+            geom_point() +
+            geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+            labs(x = "DBH", y = "CL", title = "                 C.Atlantica")+
+            theme_classic())
+
+#########################################################################
+#model crown width Platanus
+model26 <- lm(log(CW) ~ log(DBH), data = Platanus)
+#summary of the model
+summary(model26)
+#plot the model
+ggplot(Platanus, aes(x=DBH, y=CW, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CW")+
+  theme_minimal()
+
+#model crown width Cedrus
+model27 <- lm(log(CW) ~ log(DBH), data = Cedrus)
+#summary of the model
+summary(model27)
+ggplot(Cedrus, aes(x=DBH, y=CW, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CW")+
+  theme_minimal()
+
+#plot together
+ggarrange(ggplot(Platanus, aes(x=DBH, y=CW, color = Site)) +
+            geom_point() +
+            geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+            labs(x = "DBH", y = "CW", title = "                P.Hispanica")+
+            theme_minimal(),
+          ggplot(Cedrus, aes(x=DBH, y=CW, color = Site)) +
+            geom_point() +
+            geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+            labs(x = "DBH", y = "CW", title = "                 C.Atlantica")+
+            theme_minimal())
+###############################################################################
+#model crown volume Platanus
+model28 <- lm(log(CV) ~ log(DBH), data = Platanus)
+#summary of the model
+summary(model28)
+#plot the model
+ggplot(Platanus, aes(x=DBH, y=CV, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CV")+
+  theme_minimal()
+
+#model crown volume Cedrus
+model29 <- lm(log(CV) ~ log(DBH), data = Cedrus)
+#summary of the model
+summary(model29)
+#plot the model
+ggplot(Cedrus, aes(x = DBH, y = CV, color = Site)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  labs(x = "DBH", y = "CV")+
+  theme_minimal()
+
+#plot together
+ggarrange(ggplot(Platanus, aes(x=DBH, y=CV, color = Site)) +
+            geom_point() +
+            geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+            labs(x = "DBH", y = "CV", title = "                P.Hispanica")+
+            theme_minimal(),
+          ggplot(Cedrus, aes(x=DBH, y=CV, color = Site)) +
+            geom_point() +
+            geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+            labs(x = "DBH", y = "CV", title = "                 C.Atlantica")+
+            theme_minimal())
+#########################################################################################
